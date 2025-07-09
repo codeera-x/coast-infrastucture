@@ -1,0 +1,271 @@
+/* Table of content */
+
+/* 1. Basic resets */
+
+/* 2.General Styling */
+
+/* 3.Index page */
+
+/* 4. About us page */
+
+/* Table of content ends */
+
+/****************************************************************
+*****************************************************************
+******************************************************************/
+
+/********************** 1. Basic resets starts *******************/
+
+:root{
+  --primary-color:#002147;
+  --secondary-color:#5656f1;
+  --accent-color:#214700;
+  --plain-color:#eee3f8;
+  --bg-color:#ffffff;
+}
+
+:root.darkmode{
+  --primary-color:#f3f3f3;
+  --secondary-color:#8f8fec;
+  --accent-color:#214700;
+  --plain-color:#eee3f8;
+  --bg-color:#002147;
+}
+
+/* remove all browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+/* set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  position: relative;
+  font-optical-sizing: auto;
+  transition: all 5s ease;
+  background-color: var(--bg-color);
+}
+
+/* remove border from all buttons and center the text within */
+button,
+button:is(:hover, :focus-visible) {
+  line-height: 0;
+  border: 0;
+}
+
+/* to remove all list decoration */
+ul {
+  list-style: none;
+}
+
+/* remove all underline decorations frm the anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* makes images easier to work with */
+img,
+video,
+picture,
+svg {
+  max-width: 100%;
+  display: inline-block;
+}
+
+
+/********************** 1. Basic resets ends*******************/
+
+/****************************************************************
+*****************************************************************
+******************************************************************/
+
+/* 2.General Styling */
+
+.two-cols-section {
+  display: grid;
+}
+
+.section-padding {
+  padding: 2rem;
+}
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: no-wrap;
+  border: 0;
+}
+
+/* 2.General Styling ends here*/
+
+
+
+/* header starts here */
+header{
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header img{
+  width: 10rem;
+}
+
+.light-logo{
+  display: block;
+}
+
+.dark-logo{
+  display: none;
+}
+
+.darkmode .light-logo{
+  display: none;
+}
+
+.darkmode .dark-logo {
+  display: block;
+}
+
+.nav-links{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a{
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.cta-btn a{
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+.side-icons{
+  display: flex;
+  align-items: center;
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+
+.mode-toggle{
+ font-size: 2rem;
+ color: var(--primary-color);
+ transition: color 1.5s ease;
+ cursor: pointer;
+}
+
+.nav-links a:is(:hover, :focus-visible), .mode-toggle:is(:hover, :focus-visible){
+  transition: color 5s ease;
+  color: var(--secondary-color);
+}
+.nav-links a.active{
+  color: var(--secondary-color);
+}
+
+.mode-toggle .sun{
+  opacity: 0;
+  transform: translateX(-20px) rotate(90deg);
+}
+
+.mode-toggle .moon{
+   opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+.darkmode .mode-toggle .sun{
+  opacity: 1;
+  transform: translateX(-30px) rotate(0deg);
+}
+
+.darkmode .mode-toggle .moon{
+   opacity: 0;
+  transform: translateX(-20px) rotate(90deg);
+}
+
+.dropdown{
+  position: relative;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  width: 300px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+   padding: 1rem;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-content a{
+  color: #ffffff;
+}
+
+.dropdown-content li{
+  padding: 0.5rem;
+}
+
+.dropdown-content a:hover, .cta-btn a:hover{
+  color: #bdbdbd;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+
+/***** mobile view ****/
+
+@media (max-width: 768px) {
+  /* 2.General Styling starts */
+
+  .two-cols-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* 2.General Styling ends */
+
+  /* header */
+  .nav-links{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    top: 120px;
+    left: 0;
+    padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .hamburger{
+    display: block;
+  }
+}
