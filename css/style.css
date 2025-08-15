@@ -110,7 +110,6 @@ svg {
 /* 2.General Styling ends here*/
 
 
-
 /* header starts here */
 header{
   padding: 1rem 2rem;
@@ -170,7 +169,6 @@ header img{
   color: var(--primary-color);
 }
 
-
 .mode-toggle{
  font-size: 2rem;
  color: var(--primary-color);
@@ -182,6 +180,7 @@ header img{
   transition: color 5s ease;
   color: var(--secondary-color);
 }
+
 .nav-links a.active{
   color: var(--secondary-color);
 }
