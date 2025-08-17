@@ -489,6 +489,11 @@ header img{
     padding-block-end: 2rem;
   }
 
+  .services{
+  padding:2rem 4rem;
+}
+
+
   .services-text p, .services h2{
     text-align: center;
   }
@@ -500,6 +505,7 @@ header img{
   }
   
 .cta-div{
+  flex-direction: column;
   justify-content: center;
 }
 
