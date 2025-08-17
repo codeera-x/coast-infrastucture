@@ -22,6 +22,7 @@
   --accent-color:#214700;
   --plain-color:#eee3f8;
   --bg-color:#ffffff;
+  --accent-color2:#ffc93c;
 }
 
 :root.darkmode{
@@ -30,6 +31,18 @@
   --accent-color:#214700;
   --plain-color:#eee3f8;
   --bg-color:#002147;
+  --accent-color2:#ffc93c;
+}
+
+:root{
+  --h1font-size:2.3rem;
+  --h1font-weight:700;
+  --h2font-size:1.7rem;
+  --h2font-weight:600;
+  --h3font-size:1.2rem;
+  --h3font-weight:500;
+  --pfont-size:1rem;
+  --btnfont-weight:600;
 }
 
 /* remove all browser defaults */
@@ -116,6 +129,10 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--bg-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -234,6 +251,200 @@ header img{
   display: block;
 }
 
+/* header ends here */
+
+/********************/
+
+/* hero starts here */
+.hero{
+  background-image: url(/images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero::before{
+  background-image: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  content: "";
+  inset: 0;
+  position: absolute;
+  height: 100vh;
+  overflow: 0;
+}
+
+.hero-content, .hero-carousel{
+  z-index: 50;
+  position: relative;
+}
+
+.hero-content{
+  width: 60%;
+  color: var(--plain-color);
+  padding:10rem 2rem;
+}
+
+.hero-content h1{
+ font-size: var(--h1font-size);
+ font-weight: var(--h1font-weight);
+  line-height: 4rem;
+}
+
+.hero-content p{
+  font-size: var(--pfont-size);
+  padding-block-end: 3rem;
+}
+
+.cta-div{
+  display: flex;
+  gap: 2rem
+}
+
+.cta a{
+ background-color: var(--accent-color2);
+ color: var(--primary-color);
+ padding: 12px 18px;
+ font-weight: var(--btnfont-weight);
+ border-radius: 30px;
+}
+
+.cta a:is(:hover, :focus-visible){
+  background-color: var(--primary-color);
+  color: var(--accent-color2);
+}
+
+.hero-carousel{
+  padding: 10rem 0;
+}
+
+.carousel-bg{
+  background-image: radial-gradient(rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1));
+  border-top-left-radius: 20rem;
+  border-bottom-left-radius: 20rem;
+}
+
+.hero-carousel img{
+  width: 70%;
+  border-radius: 50rem;
+  border: 4px solid #ffc93c;
+  transition: transform 0.3s ease;
+    transform: translate(-2rem, 2rem); 
+}
+
+.hero-carousel img{
+  display: block;
+}
+
+.card-btn-div{
+  position: relative;
+  z-index: 30;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-block-start: 2rem;
+  padding-inline-end: 2rem;
+}
+
+.card-btn span{
+  cursor: pointer;
+  background-color: var(--plain-color);
+  color:var(--primary-color);
+  text-align: right;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+.card-btn span:is(:hover, :focus-visible){
+  background-color: #bdbdbd;
+}
+
+/* hero ends here */
+
+/*services section starts here*/
+
+.services{
+  padding: 4rem 6rem;
+}
+
+.services-text{
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-color);
+}
+
+.services h2{
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+  color: var(--primary-color);
+}
+
+.service-cards{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding-block-start: 2rem;
+}
+
+.cards{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.cards img{
+  width: 100%;
+  height: 25rem;
+ object-fit: cover;
+ overflow: hidden;
+ border-radius: 15px;
+}
+
+.card-text span i{
+  background-color: var(--primary-color);
+  font-size: 2.5rem;
+  padding:15px;
+  border-radius: 50px;
+  top: 2rem;
+  position: relative;
+}
+
+.card-text div{
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.card-text{
+  align-self: center;
+  position: absolute;
+  display: block;
+  bottom: 0.5rem;
+  width: 95%;
+  left: 0;
+  right: 0;         /* allows margin auto to center */
+  margin: auto;
+  /* background-color: var(--primary-color); */
+  text-align: center;
+}
+
+.card-text h3{
+  color: var(--accent-color2);
+  font-size: var(--h3font-size);
+  font-weight: var(--h3font-weight);
+}
+
+.card-text p{
+  font-size:0.8rem;
+}
+
+.card-text span i, .card-text p{
+  color: var(--plain-color);
+}
+
+/*services section ends here*/
 
 /***** mobile view ****/
 
@@ -267,4 +478,37 @@ header img{
   .hamburger{
     display: block;
   }
+
+  .hero-content{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .hero-content h1{
+    padding-block-end: 2rem;
+  }
+
+  .services-text p, .services h2{
+    text-align: center;
+  }
+
+  .services-text{
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+.cta-div{
+  justify-content: center;
+}
+
+  .hero-carousel{
+    display: none;
+  }
+
+  .service-cards{
+  grid-template-columns: repeat(1, 1fr);
+  
+}
 }

@@ -19,20 +19,30 @@
   </head>
   <body>
     <header>
-      <img src="./images/logo.png" alt="logo" class="light-logo"/>
-      <img src="./images/darklogo.png" alt="darklogo" class="dark-logo"/>
+      <img src="./images/logo.png" alt="logo" class="light-logo" />
+      <img src="./images/darklogo.png" alt="darklogo" class="dark-logo" />
       <ul id="nav-links" class="nav-links" role="list">
         <li role="listitem"><a class="active" href="./index.html">Home</a></li>
         <li role="listitem"><a href="#">About Us</a></li>
-        <li role="listitem" class="dropdown" onclick="toggleDropdown(event)"><a href="#">Services 
-                <i class="fa-solid fa-chevron-down"></i></a>
-        <ul class="dropdown-content" role="list">
-          <li class="dropdown-menu" role="listitem"><a href="#">Solar Energy Solutions</a></li>
-          <li class="dropdown-menu" role="listitem"><a href="#">CCTV & Security Installations</a></li>
-          <li class="dropdown-menu" role="listitem"><a href="#">Networking Configuration & Setup</a></li>
-          <li class="dropdown-menu" role="listitem"><a href="#">Domain Name Services</a></li>
-          <li class="dropdown-menu" role="listitem"><a href="#">Procurement & Sourcing</a></li>
-        </ul>
+        <li role="listitem" class="dropdown" onclick="toggleDropdown(event)">
+          <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-content" role="list">
+            <li class="dropdown-menu" role="listitem">
+              <a href="#">Solar Energy Solutions</a>
+            </li>
+            <li class="dropdown-menu" role="listitem">
+              <a href="#">CCTV & Security Installations</a>
+            </li>
+            <li class="dropdown-menu" role="listitem">
+              <a href="#">Networking Configuration & Setup</a>
+            </li>
+            <li class="dropdown-menu" role="listitem">
+              <a href="#">Domain Name Services</a>
+            </li>
+            <li class="dropdown-menu" role="listitem">
+              <a href="#">Procurement & Sourcing</a>
+            </li>
+          </ul>
         </li>
         <li role="listitem"><a href="#">Contact us</a></li>
         <li role="listitem"><a href="#">Projects</a></li>
@@ -41,12 +51,136 @@
       </ul>
       <div class="side-icons">
         <div class="mode-toggle" onclick="modeToggle()">
-        <i class="fa-solid fa-moon moon"></i>
-      <i class="fa-solid fa-sun sun"></i>
-    </div>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+          <i class="fa-solid fa-moon moon"></i>
+          <i class="fa-solid fa-sun sun"></i>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       </div>
     </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          Powering Progress. Securing
+          spaces. Connecting Posibilities.
+        </h1>
+        <p>
+          We provide smart solar, security, networking and domain
+          solutions-designed to keep your home and business running efficiently,
+          safely and online
+        </p>
+        <div class="cta-div">
+          <div class="cta"><a href="#">Request a Quote</a></div>
+          <div class="cta"><a href="#">Talk to an expert</a></div>
+        </div>
+      </div>
+      <div class="hero-carousel">
+        <div class="carousel-bg">
+          <img src="./images/herocard1.jpg" alt="cards" />
+        </div>
+        <div class="card-btn-div">
+          <button class="card-btn">
+            <span><i class="fa-solid fa-chevron-left"></i></span>
+          </button>
+          <button class="card-btn">
+            <span><i class="fa-solid fa-chevron-right"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <h2>SERVICE HIGHLIGHTS</h2>
+      <div class="services-text">
+        <p>Smart infrastructure for Power, Protection, and Digital Reach</p>
+        <div class="cta">
+          <a href="#"
+            >Explore All Services <i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="service-cards">
+        <div class="cards">
+          <img src="./images/servicecards1.jpg" alt="solar" />
+          <div class="card-text">
+            <span><i class="fa-solid fa-solar-panel"></i></span>
+            <div>
+              <h3>Solar Energy Solutions</h3>
+              <p>
+                Reliable, cost-saving solar systems tailored for homes and
+                businesses.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="./images/servicecards2.jpg" alt="CCTV" />
+          <div class="card-text">
+            <span><i class="fa-solid fa-video"></i></span>
+            <div>
+              <h3>CCTV & Security Installations</h3>
+              <p>
+                Smart surveilance setups to monitor and protect what matters
+                most.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="./images/servicecards3.jpg" alt="CCTV" />
+          <div class="card-text">
+            <span><i class="fa-solid fa-network-wired"></i></span>
+            <div>
+              <h3>Neworking & Configuration</h3>
+              <p>
+                Seamless connectivity solutions for homes, offices and growing
+                teams.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="./images/servicecards4.jpg" alt="CCTV" />
+          <div class="card-text">
+            <span><i class="fa-solid fa-globe"></i></span>
+            <div>
+              <h3>Domain Name Services</h3>
+              <p>
+                Secure your online identity with fast, professional domain
+                setup.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="./images/servicecards5.jpg" alt="CCTV" />
+          <div class="card-text">
+            <span><i class="fa-solid fa-handshake"></i></span>
+            <div>
+              <h3>Procurement & Sourcing</h3>
+              <p>
+                We find, negotiate and deliver your tech and infrastructure
+                needs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="./images/servicecards6.jpg" alt="CCTV" />
+          <div class="card-text">
+            <span><i class="fa-solid fa-mobile-screen-button"></i></span>
+            <div>
+              <h3>USSD Solutions</h3>
+              <p>
+                Custom USSD shortcodes for secure offline user access and
+                service delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
   <script src="./js/script.js"></script>
 </html>
