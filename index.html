@@ -13,6 +13,9 @@
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coast Infrastructure</title>
@@ -47,9 +50,9 @@
         <li role="listitem"><a href="#">Contact us</a></li>
         <li role="listitem"><a href="#">Projects</a></li>
         <li role="listitem"><a href="#FAQs">FAQs</a></li>
-        <li class="cta-btn"><a href="#">Request a quote</a></li>
       </ul>
       <div class="side-icons">
+        <a href="#" class="cta-btn">Request a quote</a>
         <div class="mode-toggle" onclick="modeToggle()">
           <i class="fa-solid fa-moon moon"></i>
           <i class="fa-solid fa-sun sun"></i>
@@ -59,33 +62,81 @@
     </header>
 
     <section class="hero">
-      <div class="hero-content">
-        <h1>
-          Powering Progress. Securing
-          spaces. Connecting Posibilities.
-        </h1>
-        <p>
-          We provide smart solar, security, networking and domain
-          solutions-designed to keep your home and business running efficiently,
-          safely and online
-        </p>
-        <div class="cta-div">
-          <div class="cta"><a href="#">Request a Quote</a></div>
-          <div class="cta"><a href="#">Talk to an expert</a></div>
+      <!-- All Slides -->
+      <div class="hero-slides">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+          <!-- Left: Text -->
+          <div class="hero-content">
+            <h1>
+              Powering Progress. Securing spaces. Connecting Possibilities.
+            </h1>
+            <p>
+              We provide smart solar, security, networking and domain
+              solutions—designed to keep your home and business running
+              efficiently, safely and online.
+            </p>
+            <div class="cta-div">
+              <div class="cta"><a href="#">Request a Quote</a></div>
+              <div class="cta"><a href="#">Talk to an Expert</a></div>
+            </div>
+          </div>
+          <!-- Right: Image -->
+          <div class="hero-carousel">
+            <img src="./images/herocard1.jpg" alt="cards" />
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <div class="hero-content">
+            <h1>Smart Security for Safer Homes & Businesses.</h1>
+            <p>
+              From advanced surveillance to robust firewalls, we connect you
+              safely to the world.
+            </p>
+            <div class="cta-div">
+              <div class="cta"><a href="#">Request a Quote</a></div>
+              <div class="cta"><a href="#">Talk to an Expert</a></div>
+            </div>
+          </div>
+          <div class="hero-carousel">
+            <img src="./images/herocard1.jpg" alt="cards" />
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <div class="hero-content">
+            <h1>Smart Solar. Smart Future.</h1>
+            <p>
+              Renewable energy solutions to power your growth while protecting
+              the planet.
+            </p>
+            <div class="cta-div">
+              <div class="cta"><a href="#">Request a Quote</a></div>
+              <div class="cta"><a href="#">Talk to an Expert</a></div>
+            </div>
+          </div>
+          <div class="hero-carousel">
+            <img src="./images/herocard1.jpg" alt="cards" />
+          </div>
         </div>
       </div>
-      <div class="hero-carousel">
-        <div class="carousel-bg">
-          <img src="./images/herocard1.jpg" alt="cards" />
-        </div>
-        <div class="card-btn-div">
-          <button class="card-btn">
-            <span><i class="fa-solid fa-chevron-left"></i></span>
-          </button>
-          <button class="card-btn">
-            <span><i class="fa-solid fa-chevron-right"></i></span>
-          </button>
-        </div>
+
+      <!-- Controls -->
+      <div class="card-btn-div">
+        <button class="card-btn prev">
+          <span><i class="fa-solid fa-chevron-left"></i></span>
+        </button>
+        <button class="card-btn next">
+          <span><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+      </div>
+
+      <!-- Slide Indicators -->
+      <div class="dots-div">
+        <div class="dots"></div>
       </div>
     </section>
 
@@ -181,6 +232,248 @@
         </div>
       </div>
     </section>
+
+    <section class="our-impact">
+      <div class="our-impact-text">
+        <h2>Our Impact So Far</h2>
+        <p>
+          From powering rural homes to securing urban businesses, our work
+          speaks through every panel installed and every system configured.
+          <br />
+          We're driven by results, not promises-and our numbers prove it
+        </p>
+      </div>
+      <div class="works-done">
+        <div class="work-cards">
+          <h2>30+</h2>
+          <p>Solar Projects Installed</p>
+        </div>
+        <div class="work-cards">
+          <h2>50+</h2>
+          <p>CCTV Systems Deployed</p>
+        </div>
+        <div class="work-cards">
+          <h2>100+</h2>
+          <p>Domains Registered</p>
+        </div>
+        <div class="work-cards">
+          <h2>100+</h2>
+          <p>Procured items Delivered</p>
+        </div>
+        <div class="work-cards">
+          <h2>5</h2>
+          <p>Industry Partnerships</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-partners">
+      <div class="our-partners-text">
+        <h2>Our Trusted Partners</h2>
+        <p>Just some of our leading brands that trust Coast Infrastructure</p>
+      </div>
+
+      <!-- Flickity HTML init -->
+      <div
+        class="carousel"
+        data-flickity='{ "autoPlay": 1500, "pauseAutoPlayOnHover": false, "pageDots": false }'>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-microsoft"></i> microsoft</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-google"></i> google</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-microsoft"></i> microsoft</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-google"></i> google</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-microsoft"></i> microsoft</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-microsoft"></i> microsoft</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-google"></i> google</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-microsoft"></i> microsoft</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-google"></i> google</span>
+        </div>
+        <div class="carousel-cell">
+          <span><i class="fa-brands fa-microsoft"></i> microsoft</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonial-head">
+        <h3>Testimonials</h3>
+        <h2>Our Happy Customers</h2>
+      </div>
+      <div
+        class="carousel two"
+        data-flickity='{ "autoPlay": 5000, "pauseAutoPlayOnHover": false}'>
+        <div class="carousel-cell two">
+          <div>
+            <span class="quote"><i class="fa-solid fa-quote-left"></i></span>
+            <p>
+              They installed our solar system and cctv within 3days, and it's
+              been perfect since. Highly Professional.
+            </p>
+            <span class="user"><i class="fa-solid fa-circle-user"></i></span>
+            <h4>Mrs. Adebayo</h4>
+            <p>Ibadan</p>
+          </div>
+        </div>
+        <div class="carousel-cell two">
+          <div>
+            <span class="quote"><i class="fa-solid fa-quote-left"></i></span>
+            <p>
+              They installed our solar system and cctv within 3days, and it's
+              been perfect since. Highly Professional.
+            </p>
+            <span class="user"><i class="fa-solid fa-circle-user"></i></span>
+            <h4>Mrs. Adebayo</h4>
+            <p>Ibadan</p>
+          </div>
+        </div>
+        <div class="carousel-cell two">
+          <div>
+            <span class="quote"><i class="fa-solid fa-quote-left"></i></span>
+            <p>
+              They installed our solar system and cctv within 3days, and it's
+              been perfect since. Highly Professional.
+            </p>
+            <span class="user"><i class="fa-solid fa-circle-user"></i></span>
+            <h4>Mrs. Adebayo</h4>
+            <p>Ibadan</p>
+          </div>
+        </div>
+        <div class="carousel-cell two">
+          <div>
+            <span class="quote"><i class="fa-solid fa-quote-left"></i></span>
+            <p>
+              They installed our solar system and cctv within 3days, and it's
+              been perfect since. Highly Professional.
+            </p>
+            <span class="user"><i class="fa-solid fa-circle-user"></i></span>
+            <h4>Mrs. Adebayo</h4>
+            <p>Ibadan</p>
+          </div>
+        </div>
+        <div class="carousel-cell two">
+          <div>
+            <span class="quote"><i class="fa-solid fa-quote-left"></i></span>
+            <p>
+              They installed our solar system and cctv within 3days, and it's
+              been perfect since. Highly Professional.
+            </p>
+            <span class="user"><i class="fa-solid fa-circle-user"></i></span>
+            <h4>Mrs. Adebayo</h4>
+            <p>Ibadan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="get-started">
+      <div class="get-started-text">
+        <p>Ready to power up your space or brand?</p>
+        <h3>Let's get you started.</h3>
+      </div>
+      <div class="bottom-cta">
+        <div class="cta"><a href="#">Request a Free Quote</a></div>
+        <div class="cta"><a href="#">Book a Site Visit</a></div>
+        <div class="cta"><a href="#">Chat with Us on WhatsApp</a></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-header">
+        <img src="./images/darklogo.png" alt="logo" />
+        <div class="subscribe">
+          <form>
+            <h4>Subscribe now</h4>
+            <input name="email" type="email" placeholder="Email" />
+            <button type="submit"><a href="#">Subscribe</a></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <div class="about">
+          <h4>About</h4>
+          <p>Reliable infrastructure, power, and security solutions</p>
+          <p>Member of the Coast Systems Group.</p>
+          <p>Serving homes, SME's, and enterprises across Nigeria.</p>
+        </div>
+
+        <div class="links">
+          <h4>Links</h4>
+          <ul class="link-list" role="list">
+            <li role="listitem"><a href="#">About Us</a></li>
+            <li role="listitem"><a href="#">Service</a></li>
+            <li role="listitem"><a href="#">Contact us</a></li>
+            <li role="listitem"><a href="#">Project</a></li>
+            <li role="listitem"><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="working-hours">
+          <h4>Working Hours</h4>
+          <ul class="hours" role="list">
+            <li role="listitem"><span>Mon-Fri:</span> 9:00 AM - 6:00 PM</li>
+            <li role="listitem"><span>Sat-Sun:</span> 8:00 AM - 4:00PM</li>
+            <li role="listitem"><span>Response Time:</span> Within 24hrs</li>
+          </ul>
+        </div>
+
+        <div class="get-in-touch">
+          <h4>Get in Touch</h4>
+          <ul class="contact" role="list">
+            <li role="listitem">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Address: </span> Ibadan, Oyo state, Nigeria
+            </li>
+            <li role="listitem">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email: </span> info@coastinfra.com
+            </li>
+            <li role="listitem">
+              <i class="fa-solid fa-phone"></i>
+              <span>Phone: </span> +234 807 299 1328
+            </li>
+            <li role="listitem">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp: </span> +234 807 299 1328
+            </li>
+          </ul>
+          <span>Domain Services & Procurement Available Nationwide</span>
+        </div>
+      </div>
+
+      <div class="media-links">
+        <span
+          ><a href="#"><i class="fa-brands fa-facebook-f"></i></a></span
+        ><span
+          ><a href="#"><i class="fa-brands fa-x-twitter"></i></a></span
+        ><span
+          ><a href="#"><i class="fa-brands fa-instagram"></i></a></span
+        ><span
+          ><a href="#"><i class="fa-brands fa-linkedin-in"></i></a
+        ></span>
+      </div>
+
+      <div class="footer-copyright">
+        <h6>Copyright 2025 Powered by CRT</h6>
+      </div>
+    </footer>
   </body>
   <script src="./js/script.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </html>
