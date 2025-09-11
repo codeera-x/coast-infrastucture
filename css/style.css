@@ -913,7 +913,7 @@ input::placeholder {
   height: 80vh;
 }
 
-.hero.aboutus div{
+.hero.aboutus div, .hero.cctv div, .hero.solar div{
  position: relative;
   z-index: 10;
   height: 100%;
@@ -924,13 +924,13 @@ input::placeholder {
   text-align: center;
 }
 
-.hero.aboutus h1{
+.hero.aboutus h1, .hero.cctv h1, .hero.solar h1{
   color: var(--accent-color2);
   font-size: var(--h1font-size);
   font-weight: var(--h1font-weight);
 }
 
-.hero.aboutus{
+.hero.aboutus, .hero.cctv, .hero.solar{
   color: var(--plain-color);
   font-size: 1.2rem;
 }
@@ -1063,6 +1063,7 @@ input::placeholder {
   border-radius: 15px;
   background-color: rgba(211, 208, 255, 0.3);
   padding: 2rem 1rem;
+  transition: transform 0.5s ease;
 }
 
 .what-card span i{
@@ -1089,7 +1090,7 @@ input::placeholder {
   color: var(--plain-color);
 }
 
-.approach-head{
+.approach-head, .security-services h2, .camera-types h2{
   text-align: center;
 }
 
@@ -1209,6 +1210,260 @@ input::placeholder {
 /* Work with us section starts here */
 
 /* About us page ends here */
+
+/***************************/
+
+/* CCTV services page starts here */
+
+/* keep an eye section starts here */
+.keep-eye{
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  justify-content: space-between;
+}
+
+.keep-img img{
+  width: 60%;
+  border:5px solid var(--bg-color);
+  border-radius: 20px;
+}
+
+.keep-img{
+  position: relative;
+  width: 100%;
+  padding-block-end: 4rem;
+}
+
+.keep-img .second-img{
+  position: absolute;
+  top: 20%;
+  right: -5%;
+}
+
+.keep-container h2, .security-services h2, .camera-types h2{
+ color: var(--primary-color);
+ font-size: var(--h2font-size);
+ font-weight: var(--h2font-weight);
+ padding-block-end: 1.5rem;
+}
+/* keep an eye section starts here */
+
+/* security services section starts here */
+.security-services{
+  padding: 3rem;
+  background-color: var(--plain-color);
+}
+
+.ss-container{
+  padding-block-start: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  row-gap: 6rem;
+  align-items: center;
+}
+
+.icon-img{
+  width: 40%;
+  margin: auto;
+  position: absolute;
+  bottom: 60%;
+  right: 30%;
+  margin: auto; 
+  border-radius: 50%;
+   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ss-content{
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 20px;
+  padding-block-start: 7rem;
+  min-height: 38vh;
+}
+
+.ss-content h3{
+  font-size: var(--h3font-size);
+  font-weight: var(--h3font-weight);
+  color: var(--primary-color);
+  padding-block-end: 0.5rem;
+}
+
+.ss-card{
+  position: relative;
+  transition: transform 0.5s ease;
+}
+/* security services section starts here */
+
+/* camera types section starts here */
+.camera-types{
+  padding: 3rem;
+}
+
+.camera-card .camera-img{
+  width: 35%;
+}
+
+.camera-img img{
+  border-radius: 20px;
+  border:5px solid #ffc93c;
+}
+
+.camera-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.camera-card{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.camera-content h3{
+ font-size: var(--h3font-size);
+ font-weight: var(--h3font-weight);
+ color: var(--accent-color2);
+ padding-block-end: 1rem;
+}
+
+.camera-content p{
+  color: var(--plain-color);
+}
+
+.end-p p{
+  color: var(--primary-color);
+  font-style: italic;
+}
+/* camera types section starts here */
+
+/* who we install for section starts here */
+.install, .sample-packages{
+  padding: 3rem;
+  background-color: var(--primary-color);
+}
+
+.install h2, .sample-packages h2{
+  font-size: var(--h2font-size);
+  font-weight: var(--h2font-weight);
+  color: var(--accent-color2);
+  text-align: center;
+  padding-block-end: 1.5rem;
+}
+
+.install-container{
+  color: var(--plain-color);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.install-cards{
+  width: 15%;
+  margin: auto;
+  text-align: center;
+}
+
+.install-cards span i{
+  padding-block-end: 1.5rem;
+  font-size: 4rem;
+}
+/* who we install for section starts here */
+
+.what-we-do.why-coast{
+  padding: 2rem;
+}
+
+/* sample packages section starts here */
+.sample-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.sample-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9291912f;
+  padding:2rem;
+  box-shadow: 4px 4px 4px #ffc83c73;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+
+.sample-card:is(:hover, :focus-visible), .what-card:is(:hover, :focus-visible), .camera-card:is(:hover, :focus-visible), .ss-card:is(:hover, :focus-visible){
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.sample-card span i{
+  font-size: 6rem;
+  color: var(--accent-color2);
+  padding-block-end: 2rem;
+  text-align: center;
+}
+
+.sample-card a h3{
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--accent-color2);
+  font-size: var(--h3font-size);
+  font-weight: var(--h3font-weight);
+  padding: 1rem 2rem;
+  left: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  top: 40%;
+}
+
+.sample-card a h3:is(:hover, :focus-visible){
+  background-color: var(--accent-color2);
+  color: var(--primary-color);
+}
+
+.sample-card p{
+  padding-block-start: 5rem;
+  text-align: center;
+  color: var(--plain-color);
+}
+
+/* sample packages section ends here */
+
+/* CCTV services page ends here */
+
+/*******************************
+********************************
+********************************
+*********************************/
+
+/* solar services section starts here */
+.icon-container{
+  position: absolute;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+  top: -30%;
+  right: 30%;
+}
+
+.icon-container i{
+  font-size: 5rem;
+  color: var(--primary-color);
+}
 
 /***** mobile view ****/
 @media (max-width: 950px){
