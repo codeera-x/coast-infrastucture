@@ -21,6 +21,7 @@
   --secondary-color:#5656f1;
   --accent-color:#214700;
   --plain-color:#eee3f8;
+  --text-color: #000811;
   --bg-color:#ffffff;
   --accent-color2:#ffc93c;
 }
@@ -30,6 +31,7 @@
   --secondary-color:#8f8fec;
   --accent-color:#214700;
   --plain-color:#eee3f8;
+  --text-color: #eeeeee;
   --bg-color:#002147;
   --accent-color2:#ffc93c;
 }
@@ -787,7 +789,7 @@ header img{
 /* footer starts here */
 
 footer{
-  background-color: var(--primary-color);
+  background-color: #002147;
   padding:2rem 4rem;
 }
 
@@ -1214,6 +1216,9 @@ input::placeholder {
 /***************************/
 
 /* CCTV services page starts here */
+.hero.cctv{
+  background-image: url(/images/cctvbg.jpg);
+}
 
 /* keep an eye section starts here */
 .keep-eye{
@@ -1246,7 +1251,7 @@ input::placeholder {
  color: var(--primary-color);
  font-size: var(--h2font-size);
  font-weight: var(--h2font-weight);
- padding-block-end: 1.5rem;
+ padding-block-end: 2.5rem;
 }
 /* keep an eye section starts here */
 
@@ -1269,7 +1274,7 @@ input::placeholder {
   width: 40%;
   margin: auto;
   position: absolute;
-  bottom: 60%;
+  top: -4rem;
   right: 30%;
   margin: auto; 
   border-radius: 50%;
@@ -1301,6 +1306,7 @@ input::placeholder {
 
 /* camera types section starts here */
 .camera-types{
+  background-color: #f3f3f3;
   padding: 3rem;
 }
 
@@ -1325,8 +1331,9 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: var(--primary-color);
+  background-color: #002147;
   border-radius: 20px;
+  min-height: 20vh;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease;
 }
@@ -1351,7 +1358,7 @@ input::placeholder {
 /* who we install for section starts here */
 .install, .sample-packages{
   padding: 3rem;
-  background-color: var(--primary-color);
+  background-color: #002147;
 }
 
 .install h2, .sample-packages h2{
@@ -1517,6 +1524,10 @@ input::placeholder {
     width: 90%;
   }
 
+  .camera-card .camera-img, .sample-card a h3{
+    width: 70%;
+  }
+
   .footer-content{
     flex-wrap: wrap;
   }
@@ -1527,7 +1538,7 @@ input::placeholder {
   gap: 3rem;
 }
 
-.who-we-are{
+.who-we-are, .keep-eye, .camera-card{
   flex-direction: column;
 }
 
@@ -1540,7 +1551,7 @@ flex-direction: column;
   gap: 2rem;
 }
 
-.what-cards{
+.what-cards, .work-with-cards, .sample-container{
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
@@ -1558,10 +1569,10 @@ flex-direction: column;
   width: 10rem;
 }
 
-.work-with-cards{
+.ss-container{
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
 }
+
 }
 
 @media (max-width: 768px) {
@@ -1611,8 +1622,7 @@ flex-direction: column;
 
   .services{
   padding:2rem 4rem;
-}
-
+ }
 
   .services-text p, .services h2{
     text-align: center;
@@ -1629,15 +1639,15 @@ flex-direction: column;
   gap: 3rem;
 }
 
-  .service-cards{
+  .service-cards, .camera-container, .what-cards, .work-with-cards{
   grid-template-columns: repeat(1, 1fr);
 }
 
-  .work-cards, .testimonials{
+  .work-cards, .testimonials, .install-cards {
     width: 80%;
   }
 
-  .carousel-cell {
+  .carousel-cell{
   width: 40%;
 }
 
@@ -1654,7 +1664,7 @@ flex-direction: column;
   width: 100%;
 }
 
-form, .who-we-are-text div{
+form, .who-we-are-text div, .install-container{
   flex-direction: column;
 }
 
@@ -1674,11 +1684,18 @@ form, .who-we-are-text div{
   font-size: 1rem;
 }
 
-.what-cards, .work-with-cards{
-  grid-template-columns: repeat(1, 1fr);
-}
-
 .who-we-are img{
   height: 30vh;
 }
+}
+
+@media (max-width: 620px) {
+ .sample-container, .ss-container{
+  grid-template-columns: repeat(1, 1fr);
+ }
+
+ .ss-content{
+  min-height: 100%;
+  padding-block-start: 11rem;
+ }
 }
